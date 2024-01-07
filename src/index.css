@@ -1,0 +1,473 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.login-input {
+  border-radius: 8px;
+  padding: 5px 9px;
+  min-width: 300px;
+  height: 52px;
+  /* border: 2px solid #828282 !important; */
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.loginform {
+  /* background-color: #DAE6F6; */
+  /* margin: 80px; */
+  margin-top: 70px;
+  padding: 30px;
+  border-radius: 4px;
+  max-width: 450px;
+  margin-left: auto;
+  /* box-shadow: 0px 0px 16px #828282 ; */
+}
+
+.heading {
+  font-weight: 700;
+  color: white;
+  font-size: 38px;
+}
+
+.subheading {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.forgot {
+  color: #e37815;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.forgot:hover {
+  color: white;
+}
+
+.button-primary {
+  min-width: 50%;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: #e37815;
+}
+
+.button-small-primary {
+  min-width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #e37815;
+}
+
+.button-primary:hover {
+  /* color: #301B52; */
+  color: #043365;
+  background: white;
+}
+
+.login-container {
+  background-color: #043365;
+  height: 609px;
+  padding: 50px;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  /* background-image: url("../src/images/background-plus.png"); */
+  /* clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%); */
+}
+
+.navbar-container {
+  background-color: whitesmoke;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+}
+
+.logo {
+  padding: 10px 5px;
+  width: 6.40625vw;
+  height: auto;
+  max-width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.side-nav {
+  background-color: #043365;
+  color: white;
+  width: 107px;
+  min-height: 600px;
+  text-align: left;
+  position: fixed;
+}
+
+.mt-6 {
+  margin-top: 54px !important;
+}
+
+.timesheet-header {
+  background-color: rgb(216 216 232);
+  padding: 8px 5px;
+  text-align: left;
+}
+
+.header {
+  background-color: rgb(216 216 232);
+  padding: 8px 5px;
+  text-align: left;
+}
+
+.table-container {
+  width: -webkit-fill-available;
+  /* padding-left: 10%; */
+}
+
+.project-card1 {
+  border: 2px solid #0052ab;
+  border-radius: 12px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.projectHeading {
+  color: rgb(32, 32, 147);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.projectSubheading {
+  font-weight: 500;
+  font-size: 17px;
+  color: rgb(106, 106, 106);
+}
+
+.timesheet-input {
+  max-width: 78px !important;
+  height: 46px;
+  border: 1px solid #043365;
+  border-radius: 12px;
+  padding: 5px 10px;
+}
+
+.projectName {
+  min-width: 250px;
+}
+
+.btn-outline-dark{
+ background-color: #043365 !important;
+ color: white !important;
+}
+.btn-outline-dark:hover{
+  background-color: rgb(216 216 232) !important;
+  color: #043365 !important;
+  border: 1px solid #043365;
+ }
+
+ .btn-dark{
+  background-color: rgb(216 216 232) !important;
+  color: #043365 !important;
+  border: 1px solid #043365;
+ }
+ .btn-dark:hover{
+  background-color: #e37815 !important;
+  color: white !important;
+  border: #e37815;
+ }
+ 
+ 
+
+/* Styling for the calendar overlay */
+.calendar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 232, 232, 0.5);
+  /* Semi-transparent overlay background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure it appears on top of other content */
+}
+
+/* MyCalendar.css (or your CSS file) */
+.calendar-container {
+  /* Other styles */
+  box-shadow: none;
+  /* Initial style with no shadow */
+  transition: box-shadow 0.3s ease-in-out;
+  /* Transition for box-shadow property */
+}
+
+/* Style when the calendar is active (clicked) */
+.calendar-active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.74);
+  /* Add shadow when active */
+}
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 1rem;
+  height: 1rem;
+  margin: 3rem 0.2rem;
+  background: #ff7d55;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  /* Semi-transparent white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Ensure the loader appears above other content */
+}
+
+.recentTickets {
+  min-width: 350px;
+}
+
+.ticketsContainer {
+  width: -webkit-fill-available;
+}
+
+.ticketcard {
+  border-radius: 12px;
+  border: 1px solid #043365;
+}
+.text-bg-primary {
+  color: #043365 !important;
+}
+
+.modal-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.loginbanner {
+  height: 553px;
+  width: 702px;
+}
+
+.teamMember {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 160px;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.timesheet-container {
+  width: -webkit-fill-available;
+}
+
+.timesheetTable {
+  overflow-y: auto;
+  position: relative;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.clickable-cell {
+  cursor: pointer;
+  /* Show hand cursor on hover */
+}
+.timesheetTable {
+  height: 40px;
+}
+
+.vishalmodal {
+  width: 100%;
+}
+.hamburger {
+  display: none;
+}
+a {
+  text-decoration: none !important;
+}
+.smallDropdown {
+  text-align: left !important;
+}
+.login-col{
+  padding-right: 0px !important;
+}
+
+/* Css for small screen  */
+@media only screen and (max-width: 800px) {
+
+  #profile-modal{
+    height: 50% !important; 
+    width: 77% !important;
+    left: 37px !important;
+  }
+
+  .calender-table{
+    overflow-x: scroll;
+  }
+  
+  .login-input{
+    min-width: 252px;
+  }
+  .login-container{
+    height: 867px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .login-col{
+    padding-right: 0px;
+  }
+  .loginbanner{
+    display: none;
+  }
+  .mt-6 {
+    margin-top: 22px !important;
+    padding-right: 0px !important;
+  }
+  .side-nav {
+    display: none;
+  }
+  .navbarIcon {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .logo{
+    height: 28px;
+    width: 55px;
+  }
+}
+
+.modal {
+  margin: 40px auto;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00b3ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Text inside the slider */
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000; /* Set the color of the text */
+  font-size: 14px; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+
+/* Initial state for the text when the checkbox is not checked */
+/* .slider-text:before {
+  content: "Day";
+} */
+
+/* Update the text when the checkbox is checked */
+input:checked + .slider .slider-text:before {
+  color: #ffffff;
+}
+
+input:checked + .slider {
+  background-color: #6390b5;
+  color: #ffffff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #6390b5;
+  color: #ffffff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

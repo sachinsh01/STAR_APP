@@ -1,0 +1,25 @@
+/* Styling the tabs(activities and buisness analytics) */
+.react-tabs__tab--selected {
+  background-color: rgb(108, 108, 232);
+  color: white; /* You can set the text color to white or any other color for better contrast */
+}
+
+.react-tabs {
+  display: flex;
+  flex-direction: column;
+}
+.react-tabs__tab-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.h3 {
+  padding-left: 130px;
+}
+/* css to define small screen (shift analytics text to left in heading) */
+@media (max-width: 575px) {
+  .h3 {
+    padding-left: 20px !important;
+  }
+}

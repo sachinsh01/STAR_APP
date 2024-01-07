@@ -1,0 +1,56 @@
+.modal-footer2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: right;
+}
+/* styling calendar */
+.react-calendar {
+  margin-top: 2px;
+  width: 300px;
+  max-height: 250px;
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 0.125em;
+}
+
+/* styling calendar dates */
+.react-calendar__tile {
+  padding: 0px;
+  height: 30px;
+}
+
+.page-link,
+.page-link:active,
+.page-link:focus {
+  box-shadow: none !important;
+}
+
+.holiday-tile {
+  background-color: rgb(248, 226, 59);
+}
+
+/* Styling toast */
+.custom-toast {
+  font-size: 12px !important;
+}
+.Toastify__toast,
+.Toastify__toast-theme--light,
+.Toastify__toast--success,
+.Toastify__toast--close-on-click {
+  height: 30px !important;
+  margin: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.Toastify__toast-body {
+  margin: 0px !important;
+  padding: 0px !important;
+  min-width: 200px !important;
+}
